@@ -4,6 +4,7 @@ import { getUser } from '../../../utilities/user-services'
 import AuthPage from '../Auth/AuthPage/AuthPage'
 import NavBar from '../NavBar/NavBar'
 import MainPage from '../MainPage/MainPage'
+import IndexPage from '../Pokedex/IndexPage'
 
 function App() {
   const [user, setUser] = useState(getUser())
@@ -14,7 +15,7 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path='/' element={<MainPage />} />
+            <Route path='/' element={<IndexPage />} />
           </Routes>
         </> :
         <AuthPage setUser={setUser} />
